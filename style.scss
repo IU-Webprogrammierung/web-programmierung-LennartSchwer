@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Roboto Mono';
     width: 80%;
@@ -17,7 +20,10 @@ h3{
 p{
     font-size: 20px;
 }
-
+ul li a{
+    text-decoration: none;
+    color: black;
+}
 $green: #9ACD48;
 $blue: #00C2F6;
 
@@ -117,5 +123,35 @@ header{
                 }                
             }
         }
+    }
+}
+footer{
+    ul{
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        width: fit-content;
+        li{
+            display: inline-block;
+            margin-right: 80px;
+            position: relative;
+            &:last-child{
+                margin: 0;
+            }
+            &.active::before{
+                content: url(assets/img/active-eyes.png);
+                position: absolute;
+                top: -24px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    svg{
+        cursor: pointer;
+        display: block;
+        width: 128px;
+        height: auto;
+        margin: 104px auto 96px;
     }
 }

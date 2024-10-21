@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto Mono";
   width: 80%;
@@ -19,6 +23,11 @@ h3 {
 
 p {
   font-size: 20px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
 }
 
 header {
@@ -122,4 +131,34 @@ header ul li.active::before {
 .exhibition .swiper .swiper-slide .swiper__content h3, .exhibition .swiper .swiper-slide .swiper__content p {
   color: white;
   margin: 0;
+}
+
+footer ul {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+footer ul li {
+  display: inline-block;
+  margin-right: 80px;
+  position: relative;
+}
+footer ul li:last-child {
+  margin: 0;
+}
+footer ul li.active::before {
+  content: url(assets/img/active-eyes.png);
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+footer svg {
+  cursor: pointer;
+  display: block;
+  width: 128px;
+  height: auto;
+  margin: 104px auto 96px;
 }/*# sourceMappingURL=style.css.map */
