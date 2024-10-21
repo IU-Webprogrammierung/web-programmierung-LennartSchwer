@@ -46,17 +46,49 @@
                 <path d="M116 0V7.47137C116 11.3874 115.532 14.5992 114.595 17.1069C113.659 19.6145 112.028 21.7443 109.704 23.4962C107.415 25.2481 104.813 26.416 101.899 27V21.0229C103.98 19.855 105.16 18.292 105.437 16.334H101.899V0H116Z" fill="black"/>
             </svg>
         </div>
-        <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
+        <div class="exhibition">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url(assets/img/amsterdam.jpg)">
+                    <div class="swiper__content">
+                        <h3>Good Intentions</h3>
+                        <p>Moco Museum</p>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url(assets/img/whatparty.jpg)">
+                    <div class="swiper__content">
+                        <h3>What Party</h3>
+                        <p>Die "WHAT PARTY"-Figur basiert auf KAWS' wiederkehrender Figur CHUM, die ursprünglich von der Michelin-Reifenfigur inspiriert ist. Die "WHAT PARTY"-Version zeigt die CHUM-Figur in einer melancholischen, nachdenklichen Pose, oft mit gesenktem Kopf und zusammengesunkenen Schultern.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url(assets/img/singapore.jpg)">
+                    <div class="swiper__content">
+                        <h3>Singapur</h3>
+                        <p>Singapore is the seventh stop on the American artist’s Kaws: Holiday tour, featuring a 42m-long sculpture of his signature Companion character at The Float at Marina Bay</p>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url(assets/img/shanghai.webp)">
+                    <div class="swiper__content">
+                        <h3>KAWS:HOLIDAY</h3>
+                        <p> Celebrates Mid-Autumn Festival in Shanghai</p>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
         <script>
             const swiper = new Swiper('.swiper', {
+            effect: 'coverflow',
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                stretch: 80,
+                depth: 200,
+                modifier: 1,
+                slideShadows: false,
+            },
             loop: true,
             navigation: {
                 nextEl: '.swiper-button-next',
