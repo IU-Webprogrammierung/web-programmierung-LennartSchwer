@@ -8,6 +8,12 @@ body {
   padding: 0 10%;
   margin: 0;
 }
+@media screen and (max-width: 992px) {
+  body {
+    width: calc(100% - 30px);
+    padding: 0 15px;
+  }
+}
 
 h1 {
   font-family: "Impact", sans-serif;
@@ -15,15 +21,32 @@ h1 {
   font-weight: normal;
   text-transform: uppercase;
 }
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 56px;
+  }
+}
 
 h2, h3 {
   font-family: "Impact", sans-serif;
   font-size: 48px;
   font-weight: normal;
 }
+@media screen and (max-width: 992px) {
+  h2, h3 {
+    font-size: 40px;
+  }
+}
 
 p {
   font-size: 20px;
+  line-height: auto;
+  margin: 0;
+}
+@media screen and (max-width: 992px) {
+  p {
+    font-size: 16px;
+  }
 }
 
 ul li a {
@@ -36,6 +59,11 @@ header {
   z-index: 9;
   padding: 48px 0;
 }
+@media screen and (max-width: 576px) {
+  header {
+    padding-bottom: 16px;
+  }
+}
 header a {
   display: inline-block;
 }
@@ -45,11 +73,25 @@ header ul {
   vertical-align: middle;
   float: right;
 }
+@media screen and (max-width: 576px) {
+  header ul {
+    display: flex;
+    justify-content: space-between;
+    float: unset;
+    width: 100%;
+    margin: 40px 0 0;
+  }
+}
 header ul li {
   list-style: none;
   display: inline-block;
   position: relative;
   margin-left: 80px;
+}
+@media screen and (max-width: 576px) {
+  header ul li {
+    margin-left: 0;
+  }
 }
 header ul li.active::before {
   content: url(assets/img/active-eyes-cut.png);
@@ -58,15 +100,46 @@ header ul li.active::before {
   left: 50%;
   transform: translateX(-50%);
 }
+header ul li a {
+  font-size: 20px;
+}
+@media screen and (max-width: 576px) {
+  header ul li a {
+    font-size: 14px;
+  }
+}
 
 .hero {
   position: relative;
   height: 100vh;
 }
+@media screen and (max-width: 992px) {
+  .hero {
+    height: 80vh;
+  }
+}
+@media screen and (max-width: 576px) {
+  .hero {
+    height: unset;
+  }
+}
 .hero p {
   display: block;
   width: 50%;
   padding: 48px 0 0 64px;
+}
+@media screen and (max-width: 992px) {
+  .hero p {
+    margin-left: 20%;
+    width: 80%;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .hero p {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 .hero img {
   position: absolute;
@@ -74,6 +147,21 @@ header ul li.active::before {
   right: 0;
   width: 548px;
   height: auto;
+}
+@media screen and (max-width: 992px) {
+  .hero img {
+    position: relative;
+    top: unset;
+    display: block;
+    width: 300px;
+    margin-left: 20%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .hero img {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .quote {
@@ -83,16 +171,42 @@ header ul li.active::before {
   width: fit-content;
   margin: 0 auto;
 }
+@media screen and (max-width: 992px) {
+  .quote {
+    margin-bottom: 160px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .quote {
+    margin: 48px auto;
+  }
+}
 .quote svg {
   position: absolute;
+}
+@media screen and (max-width: 576px) {
+  .quote svg {
+    height: 8px;
+    width: auto;
+  }
 }
 .quote svg:first-of-type {
   left: 4px;
   top: -48px;
 }
+@media screen and (max-width: 576px) {
+  .quote svg:first-of-type {
+    top: -16px;
+  }
+}
 .quote svg:last-of-type {
   right: 4px;
   bottom: -48px;
+}
+@media screen and (max-width: 576px) {
+  .quote svg:last-of-type {
+    bottom: -16px;
+  }
 }
 .quote h2 {
   font-size: 64px;
@@ -100,11 +214,27 @@ header ul li.active::before {
   text-transform: uppercase;
   text-align: center;
 }
+@media screen and (max-width: 992px) {
+  .quote h2 {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .quote h2 {
+    font-size: 20px;
+  }
+}
 
 .exhibition {
   background: #00C2F6;
   margin: 160px -9.9vw;
   padding: 96px;
+}
+@media screen and (max-width: 992px) {
+  .exhibition {
+    margin: 80px -15px;
+    padding: 0;
+  }
 }
 .exhibition .swiper {
   width: 100%;
@@ -112,6 +242,11 @@ header ul li.active::before {
   padding-top: 50px;
   padding-bottom: 50px;
   overflow: hidden;
+}
+@media screen and (max-width: 576px) {
+  .exhibition .swiper {
+    height: 500px;
+  }
 }
 .exhibition .swiper .swiper-button-prev::after, .exhibition .swiper .swiper-button-next::after {
   color: white;
@@ -121,6 +256,11 @@ header ul li.active::before {
   width: 40%;
   background-size: cover;
   background-position: center;
+}
+@media screen and (max-width: 576px) {
+  .exhibition .swiper .swiper-slide {
+    width: calc(100% - 30px);
+  }
 }
 .exhibition .swiper .swiper-slide .swiper__content {
   box-sizing: border-box;
@@ -141,9 +281,21 @@ header ul li.active::before {
   width: 80%;
   margin: 0 10%;
 }
+@media screen and (max-width: 992px) {
+  .container {
+    width: calc(100% - 30px);
+    margin: 0 15px;
+  }
+}
 .container .work__hero {
   text-align: center;
   margin-bottom: 256px;
+}
+@media screen and (max-width: 992px) {
+  .container .work__hero {
+    width: 80%;
+    margin: 0 10% 128px;
+  }
 }
 .container .work__section {
   text-align: center;
@@ -153,6 +305,12 @@ header ul li.active::before {
   display: block;
   margin: 56px auto;
 }
+@media screen and (max-width: 992px) {
+  .container .work__section img {
+    width: 100%;
+    height: auto;
+  }
+}
 .container .impression {
   margin-bottom: 160px;
 }
@@ -160,42 +318,72 @@ header ul li.active::before {
   border-radius: 32px;
   margin: 32px 0;
 }
-.container .impression:nth-child(odd) {
-  text-align: right;
+@media screen and (max-width: 992px) {
+  .container .impression img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+  }
 }
-.container .impression:nth-child(odd) img {
-  margin-left: auto;
+@media screen and (min-width: 992px) {
+  .container .impression:nth-child(odd) {
+    text-align: right;
+  }
+  .container .impression:nth-child(odd) img {
+    margin-left: auto;
+  }
 }
 
 .artist__hero {
   height: 100vh;
   background-image: url(assets/img/brian-donnelly.jpg);
   background-size: cover;
+  background-position: center;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+}
+@media screen and (max-width: 992px) {
+  .artist__hero {
+    height: 55vh;
+  }
 }
 
 .artist__container {
   width: 90%;
   margin: 100vh 5% 128px;
 }
+@media screen and (max-width: 992px) {
+  .artist__container {
+    width: 100%;
+    margin: 45vh 0 80px;
+  }
+}
+.artist__container p {
+  text-align: justify;
+}
 
 footer ul {
-  display: block;
+  display: flex;
   margin: 0 auto;
   padding: 0;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 40%;
+  justify-content: space-between;
+}
+@media screen and (max-width: 992px) {
+  footer ul {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 576px) {
+  footer ul {
+    width: 100%;
+  }
 }
 footer ul li {
-  display: inline-block;
-  margin-right: 80px;
   position: relative;
-}
-footer ul li:last-child {
-  margin: 0;
+  list-style: none;
 }
 footer ul li.active::before {
   content: url(assets/img/active-eyes.png);
@@ -210,4 +398,10 @@ footer svg {
   width: 128px;
   height: auto;
   margin: 104px auto 96px;
+}
+@media screen and (max-width: 992px) {
+  footer svg {
+    width: 64px;
+    margin: 64px auto 80px;
+  }
 }/*# sourceMappingURL=style.css.map */
