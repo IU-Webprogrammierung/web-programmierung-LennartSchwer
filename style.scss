@@ -7,12 +7,13 @@ body{
     padding: 0 10%;
     margin: 0;
 }
-h2{
+h1{
     font-family: 'Impact', sans-serif;
     font-size: 80px;
     font-weight: normal;
+    text-transform: uppercase;
 }
-h3{
+h2, h3{
     font-family: 'Impact', sans-serif;
     font-size: 48px;
     font-weight: normal;
@@ -28,6 +29,8 @@ $green: #9ACD48;
 $blue: #00C2F6;
 
 header{
+    position: relative;
+    z-index: 9;
     padding: 48px 0;
     a{
         display: inline-block;
@@ -43,11 +46,12 @@ header{
             position: relative;
             margin-left: 80px;
             &.active::before{
-                content: url(assets/img/active-eyes.png);
+                content: url(assets/img/active-eyes-cut.png);
                 position: absolute;
                 top: -24px;
                 left: 50%;
                 transform: translateX(-50%);
+                
             }
         }
     }
@@ -116,7 +120,8 @@ header{
                 display: flex;
                 justify-content: end;
                 flex-direction: column;
-                background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%);                
+                background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%);
+                border-radius: 16px;              
                 h3, p{
                     color: white;
                     margin: 0;
@@ -124,6 +129,48 @@ header{
             }
         }
     }
+}
+.container{
+    width: 80%;
+    margin: 0 10%;
+    .work__hero{
+        text-align: center;
+        margin-bottom: 256px;
+    }
+    .work__section{
+        text-align: center;
+        margin-bottom: 160px;
+        img{
+            display: block;
+            margin: 56px auto;
+        }
+    }
+    .impression{
+        margin-bottom: 160px;
+        img{
+            border-radius: 32px;
+            margin: 32px 0;
+        }
+        &:nth-child(odd){
+            text-align: right;
+            img{
+                margin-left: auto;
+            }
+        }
+    }
+}
+.artist__hero{
+    height: 100vh;
+    background-image: url(assets/img/brian-donnelly.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.artist__container{
+    width: 90%;
+    margin: 100vh 5% 128px;
 }
 footer{
     ul{
