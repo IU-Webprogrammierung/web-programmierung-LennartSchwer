@@ -35,6 +35,9 @@ p{
     @media screen and (max-width:992px){
         font-size: 16px;
     }
+    @media screen and (max-width:576px){
+        font-size: 14px;
+    }
 }
 ul li a{
     text-decoration: none;
@@ -48,10 +51,17 @@ header{
     z-index: 9;
     padding: 48px 0;
     @media screen and (max-width:576px){
-        padding-bottom: 16px;
+        padding: 16px 0;
     }
     a{
         display: inline-block;
+        @media screen and (max-width:576px){
+            width: 100%;
+            svg{
+                display: block;
+                margin: auto;
+            }
+        }
     }
     ul{
         margin: 32px 0 0;
@@ -84,6 +94,7 @@ header{
                 font-size: 20px;
                 @media screen and (max-width:576px){
                     font-size: 14px;
+                    margin: 0;
                 }
             }
         }
@@ -281,6 +292,9 @@ header{
     @media screen and (max-width:992px){
         height: 55vh;
     }
+    @media screen and (max-width:576px){
+        top: 148px;
+    }
 }
 .artist__container{
     width: 90%;
@@ -288,6 +302,9 @@ header{
     @media screen and (max-width:992px){
         width: 100%;
         margin: 45vh 0 80px;
+    }
+    @media screen and (max-width:576px){
+        margin-top: calc(55vh + 16px);
     }
     p{
         text-align: justify;

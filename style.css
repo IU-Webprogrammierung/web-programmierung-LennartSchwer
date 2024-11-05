@@ -48,6 +48,11 @@ p {
     font-size: 16px;
   }
 }
+@media screen and (max-width: 576px) {
+  p {
+    font-size: 14px;
+  }
+}
 
 ul li a {
   text-decoration: none;
@@ -61,11 +66,20 @@ header {
 }
 @media screen and (max-width: 576px) {
   header {
-    padding-bottom: 16px;
+    padding: 16px 0;
   }
 }
 header a {
   display: inline-block;
+}
+@media screen and (max-width: 576px) {
+  header a {
+    width: 100%;
+  }
+  header a svg {
+    display: block;
+    margin: auto;
+  }
 }
 header ul {
   margin: 32px 0 0;
@@ -106,6 +120,7 @@ header ul li a {
 @media screen and (max-width: 576px) {
   header ul li a {
     font-size: 14px;
+    margin: 0;
   }
 }
 
@@ -349,6 +364,11 @@ header ul li a {
     height: 55vh;
   }
 }
+@media screen and (max-width: 576px) {
+  .artist__hero {
+    top: 148px;
+  }
+}
 
 .artist__container {
   width: 90%;
@@ -358,6 +378,11 @@ header ul li a {
   .artist__container {
     width: 100%;
     margin: 45vh 0 80px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .artist__container {
+    margin-top: calc(55vh + 16px);
   }
 }
 .artist__container p {
