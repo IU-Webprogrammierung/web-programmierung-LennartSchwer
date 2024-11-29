@@ -71,6 +71,10 @@ header {
 }
 header a {
   display: inline-block;
+  transition: all .2s ease;
+}
+header a:hover{
+  color: #9ACD48;
 }
 @media screen and (max-width: 576px) {
   header a {
@@ -416,6 +420,12 @@ footer ul li.active::before {
   top: -24px;
   left: 50%;
   transform: translateX(-50%);
+}
+footer ul li a{
+  transition: all .2s ease;
+}
+footer ul li a:hover{
+  color: #9ACD48;
 }
 footer svg {
   cursor: pointer;
